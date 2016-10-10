@@ -44,16 +44,16 @@ then
 		then
 		    PLATFORM="iPhoneSimulator"
 		    if [ "$ARCH" = "x86_64" ]
-		    then
+            then
 		    	SIMULATOR="-mios-simulator-version-min=7.0"
                         HOST=x86_64-apple-darwin
 		    else
-		    	SIMULATOR="-mios-simulator-version-min=5.0"
+		    	SIMULATOR="-mios-simulator-version-min=7.0"
                         HOST=i386-apple-darwin
 		    fi
 		else
 		    PLATFORM="iPhoneOS"
-		    SIMULATOR=
+		    SIMULATOR="-mios-version-min=7.0"
                     HOST=arm-apple-darwin
 		fi
 
